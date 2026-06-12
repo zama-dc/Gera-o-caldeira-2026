@@ -59,7 +59,7 @@ public class Exercicios2 {
                 System.out.println("A área do círculo é: " + 3.14 * raioCirculo * raioCirculo);
                 break;
 
-            default:
+            default://caso escolha algo alem da 1 e 2
                 System.out.println("Essa opção não existe.");
 
         }
