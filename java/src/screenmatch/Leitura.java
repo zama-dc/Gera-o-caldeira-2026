@@ -7,7 +7,7 @@ public class Leitura {
         Scanner ler = new Scanner(System.in);// system in resumidamente rastreia a entrada do teclado
 
         System.out.println("Digite seu filme favorito: ");
-        String filmeFavorito = ler.nextLine();//nextLine lê o que o usuário digitou
+        String filmeFavorito = ler.nextLine();//nextLine lê o que o usuário digitou(uma linha de >TEXTO<)
 
         System.out.println("Qual o ano de lançamento?");
         int anoDeLancamento = ler.nextInt();
