@@ -4,11 +4,15 @@ public class Filme {
     String nome;
     int anoDeLancamento;
     boolean incluidoNoPLano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
     //MÉTODO
+
+    int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
     void exibeFichaTecnica(){//não vai em retornar nenhum valor novo
         System.out.println("Inluído no plano: " + incluidoNoPLano);
         System.out.println("Nome do filme: " + nome);

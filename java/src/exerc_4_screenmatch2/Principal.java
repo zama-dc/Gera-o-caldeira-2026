@@ -16,9 +16,9 @@ public class Principal {//classe principal(mandachuva)
         meuFilme.avalia(8);
         meuFilme.avalia(5);
         meuFilme.avalia(10);
-        System.out.println(meuFilme.somaDasAvaliacoes);
-        System.out.println(meuFilme.totalDeAvaliacoes);
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println();
+        //o filme x tem nota 8.3 com 80 mil avaliações
         System.out.println("Média de avaliações no filme " + meuFilme.nome + ": " + meuFilme.retornaMediaDasAvaliacoes());
     }
 }
