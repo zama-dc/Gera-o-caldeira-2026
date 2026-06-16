@@ -1,6 +1,7 @@
 package exerc_4_screenmatch2;
 
 import exerc_4_screenmatch2.modelo.Filme;
+import exerc_4_screenmatch2.modelo.Serie;
 
 public class Principal {//classe principal(mandachuva)
     public static void main(String[] args) {
@@ -22,5 +23,13 @@ public class Principal {//classe principal(mandachuva)
         System.out.println();
         //o filme x tem nota 8.3 com 80 mil avaliações
         System.out.println("Média de avaliações no filme " + meuFilme.getNome() + ": " + meuFilme.retornaMediaDasAvaliacoes());
+
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2004);
+        lost.exibeFichaTecnica();
+        lost.exibeFichaTecnica();
+        lost.setTemporadas(6);
+        lost.setEpisodiosPorTemporada(10);
     }
 }
