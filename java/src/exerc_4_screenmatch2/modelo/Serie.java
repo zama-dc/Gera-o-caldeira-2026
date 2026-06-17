@@ -37,4 +37,9 @@ public class Serie extends Titulo{//extends -> herança | a classe serie faz tud
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
+
+    @Override//possibilita a sobrescrita de um método
+    public int getDuracaoEmMinutos() {
+        return temporadas*episodiosPorTemporada*minutosPorEpisodio;
+    }
 }
