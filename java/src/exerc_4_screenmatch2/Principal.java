@@ -1,7 +1,9 @@
 package exerc_4_screenmatch2;
 
+import exerc_4_screenmatch2.calculos.CalculadoraDeTempo;
 import exerc_4_screenmatch2.modelo.Filme;
 import exerc_4_screenmatch2.modelo.Serie;
+import exerc_5.Calculadora;
 
 public class Principal {//classe principal(mandachuva)
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class Principal {//classe principal(mandachuva)
         meuFilme.setNome("Oldboy");
         meuFilme.setAnoDeLancamento(2003);
         meuFilme.setDuracaoEmMinutos(120);
-        meuFilme.setIncluidoNoPLano(true);
+        System.out.println("Duração do filme: "+meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();//chamo o método exibeFichaTecnica na classe principal
 
@@ -31,5 +33,19 @@ public class Principal {//classe principal(mandachuva)
         lost.exibeFichaTecnica();
         lost.setTemporadas(6);
         lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(40);
+        System.out.println("Duração para maratonar Lost: "+lost.getDuracaoEmMinutos());
+
+        Filme outroFilme = new Filme();//criei um novo objeto do tipo filme | a parte da direita cria o obj | a esquerda é onde criamos espaço na memória, uma variável que vai servir de referência
+        outroFilme.setNome("Shrek");
+        outroFilme.setAnoDeLancamento(2001);
+        outroFilme.setDuracaoEmMinutos(90);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-");
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);//série
+        System.out.println(calculadora.getTempoTotal());
     }
 }
