@@ -1,6 +1,8 @@
 package exerc_4_screenmatch2;
 
 import exerc_4_screenmatch2.calculos.CalculadoraDeTempo;
+import exerc_4_screenmatch2.calculos.FiltroRecomendacao;
+import exerc_4_screenmatch2.modelo.Episodio;
 import exerc_4_screenmatch2.modelo.Filme;
 import exerc_4_screenmatch2.modelo.Serie;
 import exerc_5.Calculadora;
@@ -47,5 +49,15 @@ public class Principal {//classe principal(mandachuva)
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);//série
         System.out.println(calculadora.getTempoTotal());
+        System.out.println();
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);//numero do ep
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
